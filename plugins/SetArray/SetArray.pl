@@ -4,7 +4,7 @@ use strict;
 use MT::Plugin;
 use MT;
 
-our $VERSION = "1.00";
+our $VERSION = "1.0";
 
 use base qw( MT::Plugin );
 
