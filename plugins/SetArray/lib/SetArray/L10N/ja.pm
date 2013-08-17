@@ -1,5 +1,4 @@
 package SetArray::L10N::ja;
-
 use strict;
 use base 'SetArray::L10N::en_us';
 use vars qw( %Lexicon );

@@ -1,0 +1,36 @@
+package MT::Plugin::SetArray;
+use strict;
+
+use MT::Plugin;
+use MT;
+
+our $VERSION = "1.0";
+
+use base qw( MT::Plugin );
+
+######################### Init Plugin #########################
+
+my $plugin = __PACKAGE__->new({
+    name => 'SetArray',
+    key => 'setarray',
+    id => 'SetArray',
+    version => $VERSION,
+    author_name => 'okayama',
+    author_link => 'http://weeeblog.net/',
+    description => '<MT_TRANS phrase=\'_PLUGIN_DESCRIPTION\'>',
+    l10n_class => 'SetArray::L10N',
+});
+
+MT->add_plugin($plugin);
+
+sub init_registry {
+    my $plugin = shift;
+    $plugin->registry({
+        tags => {
+            function => {
+                SetArray => \&_hdlr_setarray,
+            },
+        },
+    });
+}
+
