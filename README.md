@@ -1,4 +1,4 @@
-# Grep
+# SetArray
 A Movable Type plugin to set array separated string from function tag by comma to template variable.
 
 ## Requirements
